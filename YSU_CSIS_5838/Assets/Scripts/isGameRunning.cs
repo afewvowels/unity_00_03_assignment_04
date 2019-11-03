@@ -3,8 +3,6 @@ using UnityEngine.UI;
 
 public class isGameRunning : MonoBehaviour
 {
-
-
 	private bool isRunning;
 
 	public Text score;
