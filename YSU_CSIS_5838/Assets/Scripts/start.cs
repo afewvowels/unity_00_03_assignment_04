@@ -3,20 +3,18 @@
 public class start : MonoBehaviour
 {
 	public GameObject playerObject;
+
+	// UI Text elements
 	public GameObject startMessage;
 	public GameObject backMessage;
+	public GameObject score;
+
 	private bool isGameRunning;
+
 	// Start is called before the first frame update
 	void Start()
 	{
-		startMessage.SetActive(true);
-		backMessage.SetActive(false);
-	}
-
-	// Update is called once per frame
-	void Update()
-	{
-
+		DisplayMessage();
 	}
 
 	private void FixedUpdate()
@@ -25,8 +23,11 @@ public class start : MonoBehaviour
 		{
 			Instantiate(playerObject, new Vector3(0.0f, 1.5f, 0.0f), new Quaternion(0.0f, 0.0f, 0.0f, 0.0f));
 			startMessage.SetActive(false);
+			score.SetActive(true);
 			this.GetComponent<isGameRunning>().setOn();
 		}
+
+		// Display a message if the player tries to move backwards
 		if (Input.GetKey(KeyCode.S) && this.GetComponent<isGameRunning>().getState())
 		{
 			backMessage.SetActive(true);
@@ -35,5 +36,13 @@ public class start : MonoBehaviour
 		{
 			backMessage.SetActive(false);
 		}
+	}
+
+	// Make this method public for when the enemy and player collide
+	public void DisplayMessage()
+	{
+		startMessage.SetActive(true);
+		backMessage.SetActive(false);
+		score.SetActive(false);
 	}
 }

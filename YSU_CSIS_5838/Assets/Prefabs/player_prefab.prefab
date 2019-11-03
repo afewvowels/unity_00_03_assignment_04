@@ -29,6 +29,35 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.7320509, y: 1.5000001, z: 2.0000002}
   m_Center: {x: 0.000000029802322, y: 0.24999976, z: -0.00000011920929}
+--- !u!114 &597031288995847139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4756201880328278395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 716f64b1290a087479592fd38c3f1c2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3551855039612021752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4756201880328278395}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44a0b62b361a53c4a816d1bd2380be72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 2089146072010901720, guid: fb29eff1f45d7274a8469b90da3f8863,
+    type: 3}
+  interval: 0.1
+  velocity: 100
+  torque: 10
 --- !u!114 &6921341190126899358
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42,7 +71,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   force: 7
-  torque: 2
+  torque: 3
 --- !u!1001 &3539971690833135730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59,6 +88,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_TagString
       value: player
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: bef00eccb1cf0ce4f9902ac575269f5a,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: bef00eccb1cf0ce4f9902ac575269f5a,
         type: 3}

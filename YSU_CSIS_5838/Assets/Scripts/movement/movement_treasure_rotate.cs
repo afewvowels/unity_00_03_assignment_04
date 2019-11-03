@@ -9,12 +9,6 @@ public class movement_treasure_rotate : MonoBehaviour
 		this.transform.localEulerAngles = new Vector3(15.0f, Random.Range(0.0f, 360.0f), 0.0f);
 	}
 
-	// Update is called once per frame
-	void Update()
-	{
-
-	}
-
 	private void FixedUpdate()
 	{
 		if (this.transform.localRotation.y < 360.0f)
