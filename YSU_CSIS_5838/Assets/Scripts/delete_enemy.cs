@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class delete_enemy : MonoBehaviour
@@ -18,6 +19,7 @@ public class delete_enemy : MonoBehaviour
 		{
 			Destroy(this.gameObject);
 			scene.GetComponent<enemy_count>().DecrementCount();
+			score.text = Convert.ToString(Convert.ToInt32(score.text) + 5);
 		}
 	}
 }
